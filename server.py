@@ -1,5 +1,3 @@
-import sys
-
 import bs4
 import pycountry
 import json
@@ -58,7 +56,6 @@ def handle_post_request():
             # try to load it this way, when it fails (curl)
             input_json = json.loads(bs4.UnicodeDammit.detwingle(request.get_data()).decode('utf-8'))
         # Check all countries
-        print(input_json, file=sys.stderr)
         matches = {'iso': input_json['iso'], 'match_count': 0, 'countries': []}
         for country in input_json['countries']:
             if match_country.is_valid_country(input_json["iso"].upper(), country):
