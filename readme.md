@@ -1,9 +1,13 @@
 
-##Files
+## Files
 ### server.py
 Server that handles the requests
-### data_set.py
+### data_fetcher.py
 Class that loads the data and stores it in json file
+### test_module.py
+Tests for the project
+### data.json
+Scrapped data from wikipedia (used for word matching)
 
 ## Usage
 Create possibly a virtual environment for python and install dependencies
